@@ -1,7 +1,7 @@
 import express from 'express'
 import { Request, Response } from 'express'
-import { CreateContactUseCase } from '../../domain/interfaces/use-cases/create-contact.usecase'
-import { GetAllContactsUseCase } from '../../domain/interfaces/use-cases/get-all-contacts.usecase'
+import { CreateContactUseCase } from '../../domain/interfaces/use-cases/ICreateContact.usecase'
+import { GetAllContactsUseCase } from '../../domain/interfaces/use-cases/IGetAllContacts.usecase'
 
 
 export default function ContactsRouter(

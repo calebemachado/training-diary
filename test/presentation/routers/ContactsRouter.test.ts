@@ -1,8 +1,8 @@
 import request from "supertest";
-import { Contact } from "../../../src/domain/entities/contact";
-import { CreateContactUseCase } from "../../../src/domain/interfaces/use-cases/create-contact.usecase";
-import { GetAllContactsUseCase } from "../../../src/domain/interfaces/use-cases/get-all-contacts.usecase";
-import ContactRouter from '../../../src/presentation/routers/contacts.router'
+import { Contact } from "../../../src/domain/entities/Contact";
+import { CreateContactUseCase } from "../../../src/domain/interfaces/use-cases/ICreateContact.usecase";
+import { GetAllContactsUseCase } from "../../../src/domain/interfaces/use-cases/IGetAllContacts.usecase";
+import ContactsRouter from '../../../src/presentation/routers/Contacts.router'
 import server from '../../../src/server'
 
 class MockGetAllContactsUseCase implements GetAllContactsUseCase {
@@ -24,7 +24,7 @@ describe("Contact Router", () => {
     beforeAll(() => {
         mockGetAllContactsUseCase = new MockGetAllContactsUseCase()
         mockCreateContactUseCase = new MockCreateContactUseCase()
-        server.use("/contact", ContactRouter(mockGetAllContactsUseCase, mockCreateContactUseCase))
+        server.use("/contact", ContactsRouter(mockGetAllContactsUseCase, mockCreateContactUseCase))
     })
 
     beforeEach(() => {

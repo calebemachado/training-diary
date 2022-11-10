@@ -1,4 +1,4 @@
-import { Contact } from "../../entities/contact"; 
+import { Contact } from "../../entities/Contact"; 
 export interface GetAllContactsUseCase { 
     execute(): Promise<Contact[]>; 
 }
