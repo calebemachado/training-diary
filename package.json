@@ -5,6 +5,9 @@
   "repository": "https://github.com/calebemachado/training-diary.git",
   "author": "Calebe Machado <calebe.machado@ifood.com.br>",
   "license": "MIT",
+  "scripts": { 
+    "test": "jest --watchAll --collectCoverage"
+  },
   "dependencies": {
     "express": "^4.18.2"
   },
